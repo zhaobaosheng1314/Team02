@@ -1,6 +1,6 @@
-package com.oracle.Test;
+package lcy.Test;
 
-import com.oracle.beauty.Beauty;
+import lcy.beauty.Beauty;
 /*
  * lcy
  */

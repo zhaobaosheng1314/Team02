@@ -1,8 +1,8 @@
-package com.oracle.service;
+package lcy.service;
 
-import com.oracle.Utill.DbUtill;
-import com.oracle.dao.Dao;
-import com.oracle.property.User;
+import lcy.Utill.DbUtill;
+import lcy.dao.Dao;
+import lcy.property.User;
 /*
  * lcy
  */
