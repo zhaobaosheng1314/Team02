@@ -1,6 +1,6 @@
-package Text;
+package zjx_Text;
 
-import com.shoppingview.ShoppingView;
+import zjx_shoppingview.ShoppingView;
 
 public class Test {
     public static void main(String[] args) {

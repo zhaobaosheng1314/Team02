@@ -1,0 +1,7 @@
+package zjx_shoppingview;
+/**
+ * ’≈Ω®œÈ
+ */
+public class ShopCarView {
+
+}

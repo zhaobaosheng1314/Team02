@@ -1,5 +1,7 @@
-package com.pet;
-
+package zjx_pet;
+/**
+ * 张建祥
+ */
 public class PetAll {
 	private String petname;    //宠物名
 	private String pettype;    //宠物类型
@@ -8,7 +10,7 @@ public class PetAll {
 	private double weight;    //宠物体重
 	private int petgood;      //点赞数
 	private double petprice;  //宠物价格
-    private String petshape;  //宠物大小（大型犬，小型犬）
+    private String petshape;    //宠物体型（大型犬，小型犬）
     private String pethair;   //宠物毛发（短毛犬，长毛犬）
     private String pet;       //宠物类别（猫，狗）
     public String getPetname() {
