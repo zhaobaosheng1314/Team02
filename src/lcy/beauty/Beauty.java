@@ -1,4 +1,4 @@
-package com.oracle.beauty;
+package lcy.beauty;
 
 import java.awt.Font;
 import java.awt.event.ActionEvent;
@@ -11,8 +11,8 @@ import javax.swing.JPanel;
 import javax.swing.JRadioButton;
 import javax.swing.JTextField;
 
-import com.oracle.property.User;
-import com.oracle.service.Service;
+import lcy.property.User;
+import lcy.service.Service;
 /*
  * lcy
  */

@@ -1,4 +1,4 @@
-package com.oracle.property;
+package lcy.property;
 /*
  * lcy
  */

@@ -1,4 +1,4 @@
-package com.oracle.Utill;
+package lcy.Utill;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
