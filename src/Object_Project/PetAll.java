@@ -75,6 +75,11 @@ public class PetAll {
 		this.pet = pet;
 	}
 	
+	
+	public PetAll(String petname) {
+		super();
+		this.petname = petname;
+	}
 	public PetAll() {
 		super();
 	}
