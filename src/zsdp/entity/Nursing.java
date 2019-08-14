@@ -1,4 +1,4 @@
-package zsdp_entity;
+package zsdp.entity;
 
 /**
  * 护理用品
