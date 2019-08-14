@@ -23,5 +23,19 @@ public class PetAll_Service {
 		return list;
 		
 	}
+	public ArrayList<PetAll> seek(String hunt) throws SQLException  {
+		shopdao.seek(hunt);
+		ArrayList<PetAll> list = shopdao.seek(hunt);
+			if(list.isEmpty()){
+				throw new RuntimeException("本店没有这个动物！！");
+			}		
+		return list;		
+	}
+	public ArrayList<PetAll> addcar(String petnm) throws SQLException {
+		ArrayList<PetAll> list = shopdao.addcar(petnm);
+		return list;
+		
+		
+	}
 
 }
