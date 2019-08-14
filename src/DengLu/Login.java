@@ -50,7 +50,8 @@ public class Login extends JFrame{
 		final JButton button_2 = new JButton();
 		button_2.addActionListener(new ActionListener() {
 			public void actionPerformed(final ActionEvent e) {
-				
+				new ZhuCe().setVisible(true);
+				setVisible(false);
 			}
 		});
 		button_2.setFont(new Font("@·½Õý´ÖºÚËÎ¼òÌå", Font.BOLD, 22));
