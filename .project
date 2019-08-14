@@ -14,4 +14,11 @@
 	<natures>
 		<nature>org.eclipse.jdt.core.javanature</nature>
 	</natures>
+	<linkedResources>
+		<link>
+			<name>images/.2.jpg</name>
+			<type>1</type>
+			<location>D:/FeiQ/.2.jpg</location>
+		</link>
+	</linkedResources>
 </projectDescription>

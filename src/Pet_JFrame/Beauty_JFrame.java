@@ -13,6 +13,8 @@ import javax.swing.JTextField;
 
 import Object_Project.User_MeiRong;
 import Service.Bill_Service;
+import sun.java2d.pipe.DrawImage;
+import sun.java2d.pipe.DrawImagePipe;
 /**
  * 
  * @author lcy
@@ -22,6 +24,7 @@ public class Beauty_JFrame extends JFrame {
 	
 	private JTextField tf_money;
 	User_MeiRong user=new User_MeiRong();
+	
 	
 	String sum=null;//文本框显示金额总和
 	double num=0;//总金额
@@ -36,7 +39,7 @@ public class Beauty_JFrame extends JFrame {
 		ckBox_xz.addActionListener(new ActionListener() {
 			public void actionPerformed(final ActionEvent e) {
 				
-				JCheckBox checkbox=(JCheckBox)e.getSource();
+			
 				user.setMoney(user.getMoney()+user.getWashPrice());	
 				if(ckBox_xz.isSelected()==true){
 					num=num+user.getWashPrice();
@@ -58,7 +61,7 @@ public class Beauty_JFrame extends JFrame {
 		final JCheckBox ckBox_jf = new JCheckBox();
 		ckBox_jf.addActionListener(new ActionListener() {
 			public void actionPerformed(final ActionEvent e) {
-				JCheckBox checkbox=(JCheckBox)e.getSource();
+				
 				user.setMoney(user.getMoney()+user.getCutHair());
 				if(ckBox_jf.isSelected()==true){
 					num=num+user.getCutHair();
@@ -83,7 +86,7 @@ public class Beauty_JFrame extends JFrame {
 		ckBox_jzj.addActionListener(new ActionListener() {
 			public void actionPerformed(final ActionEvent e) {
 				
-				JCheckBox checkbox=(JCheckBox)e.getSource();	
+				
 				user.setMoney(user.getMoney()+user.getTrimx());
 				if(ckBox_jzj.isSelected()==true){
 					num=num+user.getTrimx();
@@ -106,7 +109,7 @@ public class Beauty_JFrame extends JFrame {
 		ckBox_xlh.addActionListener(new ActionListener() {
 			public void actionPerformed(final ActionEvent e) {
 				
-				JCheckBox checkbox=(JCheckBox)e.getSource();
+				
 				user.setMoney(user.getMoney()+user.getWashEye());
 				if(ckBox_xlh.isSelected()==true){
 					num=num+user.getWashEye();
@@ -130,7 +133,7 @@ public class Beauty_JFrame extends JFrame {
 		ckBox_kmj.addActionListener(new ActionListener() {
 			public void actionPerformed(final ActionEvent e) {
 				
-				JCheckBox checkbox=(JCheckBox)e.getSource();
+			
 				user.setMoney(user.getMoney()+user.getKnot());
 				if(ckBox_kmj.isSelected()==true){
 					num=num+user.getKnot();
@@ -152,7 +155,7 @@ public class Beauty_JFrame extends JFrame {
 		ckBox_sy.addActionListener(new ActionListener() {
 			public void actionPerformed(final ActionEvent e) {
 				
-				JCheckBox checkbox=(JCheckBox)e.getSource();
+				
 				user.setMoney(user.getMoney()+user.getBrushTeeth());
 				if(ckBox_sy.isSelected()==true){
 					num=num+user.getBrushTeeth();
@@ -189,6 +192,8 @@ public class Beauty_JFrame extends JFrame {
 		tf_money = new JTextField();
 		tf_money.setBounds(265, 316, 95, 25);
 		getContentPane().add(tf_money);
+		
+		
 		
 	}
 	
