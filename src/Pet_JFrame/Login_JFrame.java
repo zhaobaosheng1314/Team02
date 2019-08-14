@@ -10,18 +10,18 @@ import javax.swing.JLabel;
 
 import DengLu.DengLu;
 import DengLu.ZhuCe;
+
 /**
  * 
- * zbs	
- *	入口界面，注册  登录  游客
+ * zbs 入口界面，注册 登录 游客
  */
-public class Login_JFrame extends JFrame{
+public class Login_JFrame extends JFrame {
 	public Login_JFrame() {
 		super();
 		getContentPane().setLayout(null);
 		setTitle("首页");
-		setSize(858,700);
-		final JLabel label =new JLabel();
+		setSize(858, 700);
+		final JLabel label = new JLabel();
 		label.setText("绯红色的回忆");
 		label.setForeground(new Color(255, 0, 255));
 		label.setFont(new Font("华文彩云", Font.BOLD, 42));

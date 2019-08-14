@@ -5,9 +5,10 @@ import Hospital.Hospital;
 
 //ҽԺ
 public class HospitalService {
-	Dao dao =new Dao();
-      public int ser(Hospital hos){
-    	  int no=dao.hospital_dao(hos);
-    	  return no;
-      }
+	Dao dao = new Dao();
+
+	public int ser(Hospital hos) {
+		int no = dao.hospital_dao(hos);
+		return no;
+	}
 }

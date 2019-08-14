@@ -17,28 +17,29 @@ import Service.HospitalService;
 
 public class Vaccinum extends JFrame {
 
-	Hospital hos=new Hospital();
+	Hospital hos = new Hospital();
 	private JTextField text_sum;
-	//总金额
-	double sum=0;
-	//文本框总金额
-	String sum1=null;
-	//犬六联疫苗
-	int quan=0;
-	//三联疫苗
-	int san=0;
-	//五联疫苗
-	int wu=0;
-	//狂犬病疫苗
-	int kuang=0;
-	//猫三联
-	int mao=0;
-	//蛀虫
-	int zhu=0;
-	//外伤
-	int wai=0;
-	//体检
-	int ti=0;
+	// 总金额
+	double sum = 0;
+	// 文本框总金额
+	String sum1 = null;
+	// 犬六联疫苗
+	int quan = 0;
+	// 三联疫苗
+	int san = 0;
+	// 五联疫苗
+	int wu = 0;
+	// 狂犬病疫苗
+	int kuang = 0;
+	// 猫三联
+	int mao = 0;
+	// 蛀虫
+	int zhu = 0;
+	// 外伤
+	int wai = 0;
+	// 体检
+	int ti = 0;
+
 	public Vaccinum() {
 		super();
 		getContentPane().setFont(new Font("", Font.PLAIN, 8));
@@ -80,19 +81,18 @@ public class Vaccinum extends JFrame {
 		final JCheckBox checkBox_quan = new JCheckBox();
 		checkBox_quan.addActionListener(new ActionListener() {
 			public void actionPerformed(final ActionEvent e) {
-				hos.setMoney(hos.getMoney()+hos.getQuan());
-				if(checkBox_quan.isSelected()==true){
-					
-					
-					sum= sum+hos.getQuan();
-					sum1=String.valueOf(sum);
+				hos.setMoney(hos.getMoney() + hos.getQuan());
+				if (checkBox_quan.isSelected() == true) {
+
+					sum = sum + hos.getQuan();
+					sum1 = String.valueOf(sum);
 					text_sum.setText(sum1);
-				}else{
-					sum= sum-hos.getQuan();
-					
-					sum1=String.valueOf(sum);
+				} else {
+					sum = sum - hos.getQuan();
+
+					sum1 = String.valueOf(sum);
 					text_sum.setText(sum1);
-				
+
 				}
 			}
 		});
@@ -103,17 +103,17 @@ public class Vaccinum extends JFrame {
 		final JCheckBox checkBox_san = new JCheckBox();
 		checkBox_san.addActionListener(new ActionListener() {
 			public void actionPerformed(final ActionEvent e) {
-				hos.setMoney(hos.getMoney()+hos.getSan());
-				if(checkBox_san.isSelected()==true){
-					
-					sum=sum+hos.getSan();
-					sum1=String.valueOf(sum);
+				hos.setMoney(hos.getMoney() + hos.getSan());
+				if (checkBox_san.isSelected() == true) {
+
+					sum = sum + hos.getSan();
+					sum1 = String.valueOf(sum);
 					text_sum.setText(sum1);
-				}else{
-					sum=sum-hos.getSan();
-					sum1=String.valueOf(sum);
+				} else {
+					sum = sum - hos.getSan();
+					sum1 = String.valueOf(sum);
 					text_sum.setText(sum1);
-				
+
 				}
 			}
 		});
@@ -124,18 +124,18 @@ public class Vaccinum extends JFrame {
 		final JCheckBox checkBox_wu = new JCheckBox();
 		checkBox_wu.addActionListener(new ActionListener() {
 			public void actionPerformed(final ActionEvent e) {
-				hos.setMoney(hos.getMoney()+hos.getWu());
-				if(checkBox_wu.isSelected()==true){
-					sum=sum+hos.getWu();
-					sum1=String.valueOf(sum);
+				hos.setMoney(hos.getMoney() + hos.getWu());
+				if (checkBox_wu.isSelected() == true) {
+					sum = sum + hos.getWu();
+					sum1 = String.valueOf(sum);
 					text_sum.setText(sum1);
-				}else{
-					sum=sum-hos.getWu();
-					sum1=String.valueOf(sum);
+				} else {
+					sum = sum - hos.getWu();
+					sum1 = String.valueOf(sum);
 					text_sum.setText(sum1);
-				
+
 				}
-				
+
 			}
 		});
 		checkBox_wu.setText("五联疫苗");
@@ -145,16 +145,16 @@ public class Vaccinum extends JFrame {
 		final JCheckBox checkBox_kuang = new JCheckBox();
 		checkBox_kuang.addActionListener(new ActionListener() {
 			public void actionPerformed(final ActionEvent e) {
-				hos.setMoney(hos.getMoney()+hos.getKuang());
-				if(checkBox_kuang.isSelected()==true){
-					sum=sum+hos.getKuang();
-					sum1=String.valueOf(sum);
+				hos.setMoney(hos.getMoney() + hos.getKuang());
+				if (checkBox_kuang.isSelected() == true) {
+					sum = sum + hos.getKuang();
+					sum1 = String.valueOf(sum);
 					text_sum.setText(sum1);
-				}else{
-					sum=sum-hos.getKuang();
-					sum1=String.valueOf(sum);
+				} else {
+					sum = sum - hos.getKuang();
+					sum1 = String.valueOf(sum);
 					text_sum.setText(sum1);
-				
+
 				}
 			}
 		});
@@ -165,16 +165,16 @@ public class Vaccinum extends JFrame {
 		final JCheckBox checkBox_mao = new JCheckBox();
 		checkBox_mao.addActionListener(new ActionListener() {
 			public void actionPerformed(final ActionEvent e) {
-				hos.setMoney(hos.getMoney()+hos.getMao());
-				if(checkBox_mao.isSelected()==true){
-					sum=sum+hos.getMao();
-					sum1=String.valueOf(sum);
+				hos.setMoney(hos.getMoney() + hos.getMao());
+				if (checkBox_mao.isSelected() == true) {
+					sum = sum + hos.getMao();
+					sum1 = String.valueOf(sum);
 					text_sum.setText(sum1);
-				}else{
-					sum=sum-hos.getMao();
-					sum1=String.valueOf(sum);
+				} else {
+					sum = sum - hos.getMao();
+					sum1 = String.valueOf(sum);
 					text_sum.setText(sum1);
-				
+
 				}
 			}
 		});
@@ -195,18 +195,18 @@ public class Vaccinum extends JFrame {
 		final JCheckBox checkBox_zhu = new JCheckBox();
 		checkBox_zhu.addActionListener(new ActionListener() {
 			public void actionPerformed(final ActionEvent e) {
-				hos.setMoney(hos.getMoney()+hos.getZhu());
-				if(checkBox_zhu.isSelected()==true){
-					sum=sum+hos.getZhu();
-					sum1=String.valueOf(sum);
+				hos.setMoney(hos.getMoney() + hos.getZhu());
+				if (checkBox_zhu.isSelected() == true) {
+					sum = sum + hos.getZhu();
+					sum1 = String.valueOf(sum);
 					text_sum.setText(sum1);
-				}else{
-					sum=sum-hos.getZhu();
-					sum1=String.valueOf(sum);
+				} else {
+					sum = sum - hos.getZhu();
+					sum1 = String.valueOf(sum);
 					text_sum.setText(sum1);
-				
+
 				}
-				
+
 			}
 		});
 		checkBox_zhu.setText("蛀虫");
@@ -221,16 +221,16 @@ public class Vaccinum extends JFrame {
 		final JCheckBox checkBox_wai = new JCheckBox();
 		checkBox_wai.addActionListener(new ActionListener() {
 			public void actionPerformed(final ActionEvent e) {
-				hos.setMoney(hos.getMoney()+hos.getWai());
-				if(checkBox_wai.isSelected()==true){
-					sum=sum+hos.getWai();
-					sum1=String.valueOf(sum);
+				hos.setMoney(hos.getMoney() + hos.getWai());
+				if (checkBox_wai.isSelected() == true) {
+					sum = sum + hos.getWai();
+					sum1 = String.valueOf(sum);
 					text_sum.setText(sum1);
-				}else{
-					sum=sum-hos.getWai();
-					sum1=String.valueOf(sum);
+				} else {
+					sum = sum - hos.getWai();
+					sum1 = String.valueOf(sum);
 					text_sum.setText(sum1);
-				
+
 				}
 			}
 		});
@@ -251,16 +251,16 @@ public class Vaccinum extends JFrame {
 		final JCheckBox checkBox_ti = new JCheckBox();
 		checkBox_ti.addActionListener(new ActionListener() {
 			public void actionPerformed(final ActionEvent e) {
-				hos.setMoney(hos.getMoney()+hos.getTi());
-				if(checkBox_ti.isSelected()==true){
-					sum=sum+hos.getTi();
-					sum1=String.valueOf(sum);
+				hos.setMoney(hos.getMoney() + hos.getTi());
+				if (checkBox_ti.isSelected() == true) {
+					sum = sum + hos.getTi();
+					sum1 = String.valueOf(sum);
 					text_sum.setText(sum1);
-				}else{
-					sum=sum-hos.getTi();
-					sum1=String.valueOf(sum);
+				} else {
+					sum = sum - hos.getTi();
+					sum1 = String.valueOf(sum);
 					text_sum.setText(sum1);
-				
+
 				}
 			}
 		});
@@ -286,11 +286,11 @@ public class Vaccinum extends JFrame {
 		button.addActionListener(new ActionListener() {
 			public void actionPerformed(final ActionEvent e) {
 				JOptionPane.showConfirmDialog(null, "确认支付吗");
-				//service 层
-				HospitalService serv=new HospitalService();
+				// service 层
+				HospitalService serv = new HospitalService();
 				serv.ser(hos);
 				JOptionPane.showMessageDialog(null, "购买成功");
-		
+
 			}
 		});
 		button.setText("确认支付");

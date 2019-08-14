@@ -9,11 +9,10 @@ import javax.swing.JMenuBar;
 import javax.swing.JMenuItem;
 
 /**
- * @author zsdp
- * 宠物用品   主界面
+ * @author zsdp 宠物用品 主界面
  */
 
-public class Supplies_JFrame extends JFrame{
+public class Supplies_JFrame extends JFrame {
 	public Supplies_JFrame() {
 		super();
 		getContentPane().setLayout(null);
@@ -71,8 +70,5 @@ public class Supplies_JFrame extends JFrame{
 		newItemMenuItem.setText("New Item");
 		menu.add(newItemMenuItem);
 	}
-	
-	
-	
 
 }

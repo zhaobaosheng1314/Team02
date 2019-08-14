@@ -3,6 +3,7 @@ package lcx.petHospital;
 import java.awt.Dimension;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
+
 //Õ‚…À
 public class Truama extends JFrame {
 	public Truama() {
@@ -21,7 +22,7 @@ public class Truama extends JFrame {
 		label_1.setBounds(343, 194, 66, 18);
 		getContentPane().add(label_1);
 		setLocationRelativeTo(null);
-		
+
 	}
 
 }

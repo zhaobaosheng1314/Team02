@@ -22,14 +22,6 @@ import javax.swing.JTextField;
 import javax.swing.table.DefaultTableModel;
 import javax.swing.table.TableCellRenderer;
 
-
-
-
-
-
-
-
-
 import zjx_shoppingview.ShopCarView;
 import Object_Project.PetAll;
 import Service.PetAll_Service;
@@ -37,8 +29,8 @@ import Service.PetAll_Service;
 public class Shopping_JFrame extends JFrame {
 	PetAll_Service service = new PetAll_Service();
 	DefaultTableModel def = new DefaultTableModel();// 创建模板
-	String petnm=null;
-	boolean x = false ;
+	String petnm = null;
+	boolean x = false;
 	private JTextField text_seek;
 	private JTable table;
 
@@ -57,23 +49,19 @@ public class Shopping_JFrame extends JFrame {
 		button_2.addActionListener(new ActionListener() {
 			public void actionPerformed(final ActionEvent e) {
 				// 查看全部的数据库
-				
-				
-				//单选框
-				table.getColumnModel().getColumn(10).setCellRenderer(new TableCellRenderer(){
-					  public Component getTableCellRendererComponent(JTable table,
-			                    Object value, boolean isSelected, boolean hasFocus,
-			                    int row, int column) {
-						  JCheckBox ck = new JCheckBox();
-						   ck.setSelected(isSelected);//选中当前的行
-						   ck.setOpaque(true);//透明度
-						   ck.setHorizontalAlignment((int) 0.5f);//左右对齐
-			                return ck;
-			            }});    //单选框
-					  
-			
-				
-				
+
+				// 单选框
+				table.getColumnModel().getColumn(10).setCellRenderer(new TableCellRenderer() {
+					public Component getTableCellRendererComponent(JTable table, Object value, boolean isSelected,
+							boolean hasFocus, int row, int column) {
+						JCheckBox ck = new JCheckBox();
+						ck.setSelected(isSelected);// 选中当前的行
+						ck.setOpaque(true);// 透明度
+						ck.setHorizontalAlignment((int) 0.5f);// 左右对齐
+						return ck;
+					}
+				}); // 单选框
+
 				int count = def.getRowCount();
 				for (int i = 0; i < count; i++) {
 					def.removeRow(0);
@@ -81,12 +69,9 @@ public class Shopping_JFrame extends JFrame {
 				try {
 					ArrayList<PetAll> list = service.petAllService();// 将service层的集合传过来
 					for (PetAll petall : list) {
-						def.addRow(new Object[] { petall.getPetname(),
-								petall.getPettype(), petall.getPetsex(),
-								petall.getPetage(), petall.getWeight(),
-								petall.getPetprice(), petall.getPetshape(),
-								petall.getPethair(), petall.getPetgood(),
-								petall.getPet() });
+						def.addRow(new Object[] { petall.getPetname(), petall.getPettype(), petall.getPetsex(),
+								petall.getPetage(), petall.getWeight(), petall.getPetprice(), petall.getPetshape(),
+								petall.getPethair(), petall.getPetgood(), petall.getPet() });
 					}
 				} catch (SQLException e1) {
 					// TODO Auto-generated catch block
@@ -118,7 +103,7 @@ public class Shopping_JFrame extends JFrame {
 		button.addActionListener(new ActionListener() {
 			public void actionPerformed(final ActionEvent e) {
 				// 搜索
-				String hunt = text_seek.getText();//获取文本框中输入的字
+				String hunt = text_seek.getText();// 获取文本框中输入的字
 				int count = def.getRowCount();
 				for (int i = 0; i < count; i++) {
 					def.removeRow(0);
@@ -126,17 +111,14 @@ public class Shopping_JFrame extends JFrame {
 				try {
 					ArrayList<PetAll> list = service.seek(hunt);// 将service层的集合传过来
 					for (PetAll petall : list) {
-						def.addRow(new Object[] { petall.getPetname(),
-								petall.getPettype(), petall.getPetsex(),
-								petall.getPetage(), petall.getWeight(),
-								petall.getPetprice(), petall.getPetshape(),
-								petall.getPethair(), petall.getPetgood(),
-								petall.getPet() });
+						def.addRow(new Object[] { petall.getPetname(), petall.getPettype(), petall.getPetsex(),
+								petall.getPetage(), petall.getWeight(), petall.getPetprice(), petall.getPetshape(),
+								petall.getPethair(), petall.getPetgood(), petall.getPet() });
 					}
 				} catch (Exception e1) {
 					JOptionPane.showMessageDialog(null, e1.getMessage());
 				}
-				
+
 			}
 		});
 		button.setText("搜索");
@@ -155,27 +137,26 @@ public class Shopping_JFrame extends JFrame {
 		button_1.addActionListener(new ActionListener() {
 			public void actionPerformed(final ActionEvent e) {
 				// 添加购物车
-				
-				//获得选中的行				
+
+				// 获得选中的行
 				int no = table.getSelectedRowCount();// 获取表中选中的行数
 				if (no > 1) {// showMessageDialog：调出一个对话框
 					JOptionPane.showMessageDialog(null, "对不起，你选的太多了！！");
 				} else if (no == 0) {
 					JOptionPane.showMessageDialog(null, "对不起，你还没选行！！");
 				} else {// showConfirmDialog：调出一个有选项的对话框
-					int confirmNo = JOptionPane.showConfirmDialog(null,
-							"确认加入购物车吗?");
+					int confirmNo = JOptionPane.showConfirmDialog(null, "确认加入购物车吗?");
 					if (confirmNo == 0) {
 						int rowNo = table.getSelectedRow();// 获取行的索引
-						 petnm =  (String) table.getValueAt(rowNo, 0);// 获得某行某列的值
-						
-					     PetAll_Service petallservice = new PetAll_Service();	
-					     try {
+						petnm = (String) table.getValueAt(rowNo, 0);// 获得某行某列的值
+
+						PetAll_Service petallservice = new PetAll_Service();
+						try {
 							petallservice.addcar(petnm);
 						} catch (SQLException e2) {
 							// TODO Auto-generated catch block
 							e2.printStackTrace();
-						}							
+						}
 					}
 				}
 			}
@@ -192,13 +173,13 @@ public class Shopping_JFrame extends JFrame {
 		final JButton button_4 = new JButton();
 		button_4.addActionListener(new ActionListener() {
 			public void actionPerformed(final ActionEvent e) {
-				
-				ShopCarView car = new ShopCarView(petnm);								
-					car.setVisible(true);				
+
+				ShopCarView car = new ShopCarView(petnm);
+				car.setVisible(true);
 			}
 		});
 		button_4.setText("查看购物车");
-		//button_4.setEnabled(false);
+		// button_4.setEnabled(false);
 		panel_4.add(button_4);
 
 		final JScrollPane scrollPane = new JScrollPane();

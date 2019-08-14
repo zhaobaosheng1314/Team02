@@ -19,16 +19,17 @@ import Object_Project.UserNo;
 import Pet_JFrame.Login_JFrame;
 import Service.UserHave_Service;
 
-public class ZhuCe2 extends JFrame{
+public class ZhuCe2 extends JFrame {
 	private JTextField petAge;
 	private JTextField petType;
 	private JTextField petName;
 	private UserNo userNo;
-	ButtonGroup group=new ButtonGroup();
+	ButtonGroup group = new ButtonGroup();
+
 	public ZhuCe2(UserNo un) {
-		this.userNo=un;
+		this.userNo = un;
 		getContentPane().setLayout(null);
-		setSize(612,506);
+		setSize(612, 506);
 		final JLabel label_1 = DefaultComponentFactory.getInstance().createLabel("宠物名：");
 		label_1.setFont(new Font("", Font.BOLD, 22));
 		label_1.setBounds(107, 76, 92, 31);
@@ -79,26 +80,26 @@ public class ZhuCe2 extends JFrame{
 		button.addActionListener(new ActionListener() {
 			public void actionPerformed(final ActionEvent e) {
 				try {
-					String petName1=petName.getText();
-					String petType1=petType.getText();
-					String petAge1=petAge.getText();
-					if(petName1.equals("")||petName1==null){
+					String petName1 = petName.getText();
+					String petType1 = petType.getText();
+					String petAge1 = petAge.getText();
+					if (petName1.equals("") || petName1 == null) {
 						throw new RuntimeException("请输入宠物名");
 					}
-					if(petType1.equals("")||petType1==null){
+					if (petType1.equals("") || petType1 == null) {
 						throw new RuntimeException("请输入宠物类型");
 					}
-					if(petAge1.equals("")||petAge1==null){
+					if (petAge1.equals("") || petAge1 == null) {
 						throw new RuntimeException("请输入宠物年龄");
 					}
-					if(radio1.isSelected()==false&&radio2.isSelected()==false){
+					if (radio1.isSelected() == false && radio2.isSelected() == false) {
 						throw new RuntimeException("请选择宠物性别");
 					}
-					UserHave uh =null;
-					if(radio1.isSelected()==true){
-						uh= new UserHave(petName1,petType1,petAge1,"王子",userNo);
-					}else{
-						uh=new UserHave(petName1,petType1,petAge1,"公主",userNo);
+					UserHave uh = null;
+					if (radio1.isSelected() == true) {
+						uh = new UserHave(petName1, petType1, petAge1, "王子", userNo);
+					} else {
+						uh = new UserHave(petName1, petType1, petAge1, "公主", userNo);
 					}
 					UserHave_Service uhs = new UserHave_Service();
 					uhs.login(uh);
@@ -107,7 +108,7 @@ public class ZhuCe2 extends JFrame{
 					setVisible(false);
 				} catch (Exception e1) {
 					JOptionPane.showMessageDialog(null, e1.getMessage());
-					//e1.printStackTrace();
+					// e1.printStackTrace();
 				}
 			}
 		});

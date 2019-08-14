@@ -12,10 +12,10 @@ import lcx.petHospital.Moth;
 import lcx.petHospital.Test;
 import lcx.petHospital.Truama;
 import lcx.petHospital.Vaccinum;
+
 /**
  * 
- * @author lcx
- * 宠物医院   主界面
+ * @author lcx 宠物医院 主界面
  */
 public class Hospital_JFrame extends JFrame {
 	public Hospital_JFrame() {
@@ -31,8 +31,8 @@ public class Hospital_JFrame extends JFrame {
 		final JButton button = new JButton();
 		button.addActionListener(new ActionListener() {
 			public void actionPerformed(final ActionEvent e) {
-				
-				Vaccinum vaccinum=new Vaccinum();
+
+				Vaccinum vaccinum = new Vaccinum();
 				vaccinum.setVisible(true);
 			}
 		});
@@ -43,7 +43,7 @@ public class Hospital_JFrame extends JFrame {
 		final JButton button_1 = new JButton();
 		button_1.addActionListener(new ActionListener() {
 			public void actionPerformed(final ActionEvent e) {
-				Truama truama=new Truama();
+				Truama truama = new Truama();
 				truama.setVisible(true);
 			}
 		});
@@ -54,7 +54,7 @@ public class Hospital_JFrame extends JFrame {
 		final JButton button_2 = new JButton();
 		button_2.addActionListener(new ActionListener() {
 			public void actionPerformed(final ActionEvent e) {
-				Moth moth =new Moth();
+				Moth moth = new Moth();
 				moth.setVisible(true);
 			}
 		});
@@ -65,7 +65,7 @@ public class Hospital_JFrame extends JFrame {
 		final JButton button_3 = new JButton();
 		button_3.addActionListener(new ActionListener() {
 			public void actionPerformed(final ActionEvent e) {
-				Test test=new Test();
+				Test test = new Test();
 				test.setVisible(true);
 			}
 		});
@@ -76,7 +76,7 @@ public class Hospital_JFrame extends JFrame {
 		final JButton button_4 = new JButton();
 		button_4.addActionListener(new ActionListener() {
 			public void actionPerformed(final ActionEvent e) {
-				
+
 			}
 		});
 		button_4.setText("显示总金额");
