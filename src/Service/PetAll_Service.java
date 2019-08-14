@@ -33,9 +33,14 @@ public class PetAll_Service {
 	}
 	public ArrayList<PetAll> addcar(String petnm) throws SQLException {
 		ArrayList<PetAll> list = shopdao.addcar(petnm);
+		return list;		
+	}
+	public  ArrayList<PetAll> addpetcar() throws SQLException{//将购物车数据库返回
+		ArrayList<PetAll> list = shopdao.addpetcar();
 		return list;
-		
+	}
+	public void delete(String petname) {
+		shopdao.delete(petname);
 		
 	}
-
 }

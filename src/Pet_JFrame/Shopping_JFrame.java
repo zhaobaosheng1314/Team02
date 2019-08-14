@@ -168,37 +168,14 @@ public class Shopping_JFrame extends JFrame {
 					if (confirmNo == 0) {
 						int rowNo = table.getSelectedRow();// 获取行的索引
 						 petnm =  (String) table.getValueAt(rowNo, 0);// 获得某行某列的值
-//					     String	 petnm1 =  (String) table.getValueAt(rowNo, 1);
-//					     String petnm2 =  (String) table.getValueAt(rowNo, 2);
-//					     Integer	 petnm3 =  (Integer) table.getValueAt(rowNo, 3);
-//					     double	 petnm4 =  (double) table.getValueAt(rowNo, 4);
-//					     double  petnm5 =   (double) table.getValueAt(rowNo, 5);
-//					     String	 petnm6 =  (String) table.getValueAt(rowNo, 6);
-//					     String	 petnm7 =  (String) table.getValueAt(rowNo, 7);
-//					     Integer	 petnm8 =  (Integer) table.getValueAt(rowNo, 8);
-//					     String	 petnm9 =  (String) table.getValueAt(rowNo, 9);
-//						 def.addRow(new Object[] {petnm,petnm1,petnm2,petnm3,petnm4,petnm5,petnm6,petnm7,petnm8,petnm9 });
-						PetAll_Service petallservice = new PetAll_Service();						
-						try {
-							ArrayList<PetAll> list = petallservice.addcar(petnm);
-							for (PetAll petall : list) {
-								def.addRow(new Object[] { petall.getPetname(),
-										petall.getPettype(), petall.getPetsex(),
-										petall.getPetage(), petall.getWeight(),
-										petall.getPetprice(), petall.getPetshape(),
-										petall.getPethair(), petall.getPetgood(),
-										petall.getPet() });
-								
-							}
-						} catch (SQLException e1) {
-							// TODO Auto-generated catch block
-							e1.printStackTrace();
-						}
-						 //if(x=false){
-							 ShopCarView car = new ShopCarView(petnm);										
-						car.setVisible(true);	
-						// }
 						
+					     PetAll_Service petallservice = new PetAll_Service();	
+					     try {
+							petallservice.addcar(petnm);
+						} catch (SQLException e2) {
+							// TODO Auto-generated catch block
+							e2.printStackTrace();
+						}							
 					}
 				}
 			}
@@ -215,11 +192,9 @@ public class Shopping_JFrame extends JFrame {
 		final JButton button_4 = new JButton();
 		button_4.addActionListener(new ActionListener() {
 			public void actionPerformed(final ActionEvent e) {
+				
 				ShopCarView car = new ShopCarView(petnm);								
-					car.setVisible(true);
-				
-				
-				
+					car.setVisible(true);				
 			}
 		});
 		button_4.setText("查看购物车");
