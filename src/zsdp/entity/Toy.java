@@ -1,4 +1,4 @@
-package zsdp_entity;
+package zsdp.entity;
 
 /**
  * ³èÎïÍæ¾ß
@@ -7,5 +7,7 @@ package zsdp_entity;
  */
 
 public class Toy {
+	
+	 
 
 }
