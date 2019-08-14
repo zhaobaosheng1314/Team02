@@ -30,6 +30,8 @@ User_YouLeyuan user=new User_YouLeyuan();
 		ckBox_yy.addActionListener(new ActionListener() {
 			public void actionPerformed(final ActionEvent e) {
 				
+				
+				user.setMoney(user.getMoney()+user.getSwimming());
 				if(ckBox_yy.isSelected()==true){
 					num=num+user.getSwimming();
 					sum=String.valueOf(num);
@@ -50,6 +52,7 @@ User_YouLeyuan user=new User_YouLeyuan();
 		ckBox_ht.addActionListener(new ActionListener() {
 			public void actionPerformed(final ActionEvent e) {
 				
+				user.setMoney(user.getMoney()+user.getSlide());
 				if(ckBox_ht.isSelected()==true){
 					num=num+user.getSlide();
 					sum=String.valueOf(num);
@@ -71,6 +74,7 @@ User_YouLeyuan user=new User_YouLeyuan();
 		ckBox_qq.addActionListener(new ActionListener() {
 			public void actionPerformed(final ActionEvent e) {
 				
+				user.setMoney(user.getMoney()+user.getSwing());
 				if(ckBox_qq.isSelected()==true){
 					num=num+user.getSwing();
 					sum=String.valueOf(num);
@@ -92,6 +96,7 @@ User_YouLeyuan user=new User_YouLeyuan();
 		ckBox_dmq.addActionListener(new ActionListener() {
 			public void actionPerformed(final ActionEvent e) {
 				
+				user.setMoney(user.getMoney()+user.getBrige());
 				if(ckBox_dmq.isSelected()==true){
 					num=num+user.getBrige();
 					sum=String.valueOf(num);
@@ -114,6 +119,7 @@ User_YouLeyuan user=new User_YouLeyuan();
 		ckBox_tq.addActionListener(new ActionListener() {
 			public void actionPerformed(final ActionEvent e) {
 				
+				user.setMoney(user.getMoney()+user.getCircle());
 				if(ckBox_tq.isSelected()==true){
 					num=num+user.getCircle();
 					sum=String.valueOf(num);
