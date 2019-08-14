@@ -1,4 +1,4 @@
-package QOP;
+package DengLu;
 
 import java.awt.Color;
 import java.awt.Font;
@@ -11,9 +11,9 @@ import javax.swing.JOptionPane;
 import javax.swing.JPasswordField;
 import javax.swing.JTextField;
 
-import QOP.User;
-import QOP.UserHave_Service;
-import QOP.UserNo_Service;
+import Object_Project.User_Login;
+import Service.UserHave_Service;
+import Service.UserNo_Service;
 
 
 public class DengLu extends JFrame{
@@ -82,11 +82,11 @@ public class DengLu extends JFrame{
 					int no;
 					no =uhs.found(phone1);
 					if(no==1){
-						uhs.logon(new User(phone1,password1));
+						uhs.logon(new User_Login(phone1,password1));
 					}else{
 						no=uns.found(phone1);
 						if(no==2){
-							uns.logon(new User(phone1,password1));
+							uns.logon(new User_Login(phone1,password1));
 						}else{
 							throw new RuntimeException("您输入的手机号或密码错误");
 						}

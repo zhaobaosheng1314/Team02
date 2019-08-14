@@ -1,6 +1,6 @@
-package QOP;
+package Object_Project;
 
-public class User {
+public class User_Login {
 	private String phone ;
 	private String password;
 	private boolean flag = false;
@@ -22,12 +22,12 @@ public class User {
 	public void setPassword(String password) {
 		this.password = password;
 	}
-	public User(String phone, String password) {
+	public User_Login(String phone, String password) {
 		super();
 		this.phone = phone;
 		this.password = password;
 	}
-	public User() {
+	public User_Login() {
 		super();
 	}
 	

@@ -1,4 +1,4 @@
-package QOP;
+package DengLu;
 
 import javax.swing.JButton;
 import javax.swing.JFrame;
