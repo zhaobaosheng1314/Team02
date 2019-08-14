@@ -12,6 +12,7 @@ import javax.swing.JPasswordField;
 import javax.swing.JTextField;
 
 import Object_Project.User_Login;
+import Pet_JFrame.Login_JFrame;
 import Service.UserHave_Service;
 import Service.UserNo_Service;
 
@@ -106,7 +107,7 @@ public class DengLu extends JFrame{
 		button_1.addActionListener(new ActionListener() {
 			public void actionPerformed(final ActionEvent e) {
 				setVisible(false);
-				Login l = new Login();
+				Login_JFrame l = new Login_JFrame();
 				l.setVisible(true);
 			}
 		});

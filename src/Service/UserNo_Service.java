@@ -39,7 +39,7 @@ public class UserNo_Service {
 		
 	}
 	/**
-	 * ×¢²á
+	 * ×¢²á  ÎÞ³è
 	 * @param un2
 	 * @throws SQLException 
 	 */

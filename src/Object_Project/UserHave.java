@@ -4,9 +4,16 @@ public class UserHave {
 
 	private String petName;
 	private String petType;
-	private int petAge;
+	private String petAge;
 	private String Sex;
 	private UserNo UserNo;
+	public UserHave(String petName, String petType, String petAge, String Sex, UserNo UserNo) {
+		this.petName=petName;
+		this.petType=petType;
+		this.petAge=petAge;
+		this.Sex=Sex;
+		this.UserNo=UserNo;
+	}
 	public String getPetName() {
 		return petName;
 	}
@@ -19,10 +26,10 @@ public class UserHave {
 	public void setPetType(String petType) {
 		this.petType = petType;
 	}
-	public int getPetAge() {
+	public String getPetAge() {
 		return petAge;
 	}
-	public void setPetAge(int petAge) {
+	public void setPetAge(String petAge) {
 		this.petAge = petAge;
 	}
 	public String getSex() {

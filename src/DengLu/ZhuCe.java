@@ -14,6 +14,7 @@ import javax.swing.JRadioButton;
 import javax.swing.JTextField;
 
 import Object_Project.UserNo;
+import Pet_JFrame.Login_JFrame;
 import Service.UserNo_Service;
 
 public class ZhuCe extends JFrame{
@@ -111,8 +112,11 @@ public class ZhuCe extends JFrame{
 					}else if(radio_2.isSelected()==true){
 						UserNo_Service uns = new UserNo_Service();
 						uns.login(un);
+						JOptionPane.showMessageDialog(null, "×¢²á³É¹¦");
 						DengLu dl = new DengLu();
 						dl.setVisible(true);
+						new Login_JFrame().setVisible(true);
+						setVisible(false);
 					}
 				} catch (Exception e1) {
 					JOptionPane.showMessageDialog(null, e1.getMessage());
@@ -127,7 +131,7 @@ public class ZhuCe extends JFrame{
 		final JButton button_1 = new JButton();
 		button_1.addActionListener(new ActionListener() {
 			public void actionPerformed(final ActionEvent e) {
-				new Login().setVisible(true);
+				new Login_JFrame().setVisible(true);
 				setVisible(false);
 			}
 		});

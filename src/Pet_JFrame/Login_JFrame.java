@@ -1,4 +1,4 @@
-package DengLu;
+package Pet_JFrame;
 
 import java.awt.Color;
 import java.awt.Font;
@@ -7,13 +7,16 @@ import java.awt.event.ActionListener;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
+
+import DengLu.DengLu;
+import DengLu.ZhuCe;
 /**
  * 
  * zbs	
  *	入口界面，注册  登录  游客
  */
-public class Login extends JFrame{
-	public Login() {
+public class Login_JFrame extends JFrame{
+	public Login_JFrame() {
 		super();
 		getContentPane().setLayout(null);
 		setTitle("首页");

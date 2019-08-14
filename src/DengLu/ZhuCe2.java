@@ -3,17 +3,21 @@ package DengLu;
 import java.awt.Font;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.sql.SQLException;
 
 import javax.swing.ButtonGroup;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
 import javax.swing.JRadioButton;
 import javax.swing.JTextField;
 import com.jgoodies.forms.factories.DefaultComponentFactory;
 
 import Object_Project.UserHave;
 import Object_Project.UserNo;
+import Pet_JFrame.Login_JFrame;
+import Service.UserHave_Service;
 
 public class ZhuCe2 extends JFrame{
 	private JTextField petAge;
@@ -24,7 +28,7 @@ public class ZhuCe2 extends JFrame{
 	public ZhuCe2(UserNo un) {
 		this.userNo=un;
 		getContentPane().setLayout(null);
-
+		setSize(612,506);
 		final JLabel label_1 = DefaultComponentFactory.getInstance().createLabel("宠物名：");
 		label_1.setFont(new Font("", Font.BOLD, 22));
 		label_1.setBounds(107, 76, 92, 31);
@@ -74,24 +78,36 @@ public class ZhuCe2 extends JFrame{
 		final JButton button = new JButton();
 		button.addActionListener(new ActionListener() {
 			public void actionPerformed(final ActionEvent e) {
-				String petName1=petName.getText();
-				String petType1=petType.getText();
-				String petAge1=petAge.getText();
-				if(petName1.equals("")||petName1==null){
-					throw new RuntimeException("请输入宠物名");
-				}
-				if(petType1.equals("")||petType1==null){
-					throw new RuntimeException("请输入宠物类型");
-				}
-				if(petAge1.equals("")||petAge1==null){
-					throw new RuntimeException("请输入宠物年龄");
-				}
-				if(radio1.isSelected()==false&&radio2.isSelected()==false){
-					throw new RuntimeException("请选择宠物性别");
-				}
-				UserHave uh = new UserHave();
-				if(radio1.isSelected()==true){
-					
+				try {
+					String petName1=petName.getText();
+					String petType1=petType.getText();
+					String petAge1=petAge.getText();
+					if(petName1.equals("")||petName1==null){
+						throw new RuntimeException("请输入宠物名");
+					}
+					if(petType1.equals("")||petType1==null){
+						throw new RuntimeException("请输入宠物类型");
+					}
+					if(petAge1.equals("")||petAge1==null){
+						throw new RuntimeException("请输入宠物年龄");
+					}
+					if(radio1.isSelected()==false&&radio2.isSelected()==false){
+						throw new RuntimeException("请选择宠物性别");
+					}
+					UserHave uh =null;
+					if(radio1.isSelected()==true){
+						uh= new UserHave(petName1,petType1,petAge1,"王子",userNo);
+					}else{
+						uh=new UserHave(petName1,petType1,petAge1,"公主",userNo);
+					}
+					UserHave_Service uhs = new UserHave_Service();
+					uhs.login(uh);
+					JOptionPane.showMessageDialog(null, "注册成功");
+					new Login_JFrame().setVisible(true);
+					setVisible(false);
+				} catch (Exception e1) {
+					JOptionPane.showMessageDialog(null, e1.getMessage());
+					//e1.printStackTrace();
 				}
 			}
 		});
@@ -111,6 +127,7 @@ public class ZhuCe2 extends JFrame{
 		button_1.setText("取消");
 		button_1.setBounds(377, 357, 115, 41);
 		getContentPane().add(button_1);
+		setLocationRelativeTo(null);
 	}
 
 }

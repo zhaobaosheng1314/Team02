@@ -3,6 +3,7 @@ package Service;
 import java.sql.SQLException;
 
 import Dao.UserHave_Dao;
+import Object_Project.UserHave;
 import Object_Project.User_Login;
 
 /**
@@ -34,6 +35,21 @@ public class UserHave_Service {
 			
 		}else{
 			throw new RuntimeException("您输入的手机号或密码错误");
+		}
+		
+	}
+	/**
+	 * 注册  有宠
+	 * @param uh2
+	 * @throws SQLException 
+	 */
+	public void login(UserHave uh2) throws SQLException {
+		int no=uh.loginCheck(uh2.getUserNo().getPhone());
+		if(no==1){
+			throw new RuntimeException("这个手机号已经被注册啦~~~");
+		}else{
+			//注册成功
+			uh.login(uh2);
 		}
 		
 	}

@@ -26,8 +26,10 @@ public class UserNo_Dao {
 		sql="select * from user_no where phone=?";
 		ResultSet rs =db.preQuery(sql, phone1);
 		if(rs.next()){
+			db.close();
 			return no=3;
 		}else{
+			db.close();
 			return no;
 		}
 	}
@@ -44,6 +46,7 @@ public class UserNo_Dao {
 		if(rs.next()){
 			 password = rs.getString("password");
 		}
+		db.close();
 		return new User_Login(user.getPhone(),password);
 	}
 	/**
@@ -59,6 +62,7 @@ public class UserNo_Dao {
 		if(rs.next()){
 			return no=1;
 		}
+		db.close();
 		return no;
 	}
 	/**
