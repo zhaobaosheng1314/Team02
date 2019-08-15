@@ -2,6 +2,7 @@ package Service;
 
 import java.sql.SQLException;
 import java.util.ArrayList;
+import java.util.Iterator;
 
 import Dao.PetAll_Dao;
 import Object_Project.PetAll;
@@ -41,6 +42,18 @@ public class PetAll_Service {
 	}
 	public void delete(String petname) {
 		shopdao.delete(petname);
+		
+	}
+	public double sumprice() throws SQLException{
+		double price = 0;
+		ArrayList<Double> list =shopdao.sumprice();
+		Iterator<Double> it = list.iterator();
+		while(it.hasNext()){
+			Double x = it.next();
+			price+=x;
+		}
+		
+		return price;
 		
 	}
 }

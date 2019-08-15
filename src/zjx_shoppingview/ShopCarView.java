@@ -28,7 +28,7 @@ public class ShopCarView extends JFrame{
 	PetAll_Service service = new PetAll_Service();
 	DefaultTableModel dtable = new DefaultTableModel();// 创建模板
 	private JTable table;
-	private JTextField textField;
+	private JTextField text_price;
 	public ShopCarView(String petnm) {
 		super();
 		setSize(500, 500);
@@ -37,10 +37,18 @@ public class ShopCarView extends JFrame{
 		final JPanel panel = new JPanel();
 		getContentPane().add(panel, BorderLayout.NORTH);
 
-		textField = new JTextField();
-		panel.add(textField);
-		textField.setColumns(10);
-
+		text_price = new JTextField();
+		panel.add(text_price);
+		text_price.setColumns(10);
+		 
+		try {
+		    double price =	service.sumprice();
+		
+			text_price.setText(String.valueOf(price)+"元");
+			} catch (Exception e1) {
+				// TODO Auto-generated catch block
+				e1.printStackTrace();
+			}
 		final JButton button_2 = new JButton();
 		button_2.addActionListener(new ActionListener() {
 			public void actionPerformed(final ActionEvent e) {
@@ -49,6 +57,29 @@ public class ShopCarView extends JFrame{
 		});
 		panel.add(button_2);
 		button_2.setText("结算");
+
+		final JPanel panel_6 = new JPanel();
+		panel.add(panel_6);
+
+		final JPanel panel_5 = new JPanel();
+		panel.add(panel_5);
+
+		final JButton button_3 = new JButton();
+		button_3.addActionListener(new ActionListener() {
+			public void actionPerformed(final ActionEvent e) {
+				try {
+				    double refreshPrice =	service.sumprice();
+				
+					text_price.setText(String.valueOf(refreshPrice)+"元");
+					} catch (Exception e1) {
+						// TODO Auto-generated catch block
+						e1.printStackTrace();
+					}
+				
+			}
+		});
+		button_3.setText("刷新");
+		panel.add(button_3);
 
 		final JPanel panel_4 = new JPanel();
 		getContentPane().add(panel_4, BorderLayout.SOUTH);
@@ -76,7 +107,7 @@ public class ShopCarView extends JFrame{
 		button_1.addActionListener(new ActionListener() {
 			public void actionPerformed(final ActionEvent e) {
 				int no = table.getSelectedRowCount();// 获取表中选中的行数
-				if (no > 1) {// showMessageDialog：调出一个对话框
+				if (no > 6) {// showMessageDialog：调出一个对话框
 					JOptionPane.showMessageDialog(null, "请注意，你选的太多了");
 				} else if (no == 0) {
 					JOptionPane.showMessageDialog(null, "你还没选行呢！！");
@@ -126,9 +157,10 @@ public class ShopCarView extends JFrame{
 			  public Component getTableCellRendererComponent(JTable table,
 	                    Object value, boolean isSelected, boolean hasFocus,
 	                    int row, int column) {
+
 				  JCheckBox ck = new JCheckBox();
 				   ck.setSelected(isSelected);//选中当前的行
-				   ck.setOpaque(true);//透明度
+				   ck.setOpaque(false);//透明度
 				   ck.setHorizontalAlignment((int) 0.5f);//左右对齐
 	                return ck;
 	            }});    //单选框

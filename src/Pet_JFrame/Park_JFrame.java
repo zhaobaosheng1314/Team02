@@ -32,7 +32,7 @@ User_YouLeyuan user=new User_YouLeyuan();
 				
 				
 				user.setMoney(user.getMoney()+user.getSwimming());
-				if(ckBox_yy.isSelected()==true){
+				if(ckBox_yy.isSelected()==true){//œ‘ æº€∏Ò
 					num=num+user.getSwimming();
 					sum=String.valueOf(num);
 					tf_money.setText(sum);
