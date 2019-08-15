@@ -49,7 +49,7 @@ public class UserHave_Service {
 	 * @param uh2
 	 * @throws SQLException
 	 */
-	public void login(UserHave uh2) throws SQLException {
+	 public void login(UserHave uh2) throws SQLException {
 		int no = uh.loginCheck(uh2.getUserNo().getPhone());
 		if (no == 1) {
 			throw new RuntimeException("这个手机号已经被注册啦~~~");
