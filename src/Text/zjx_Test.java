@@ -1,14 +1,14 @@
 package Text;
 
 import Pet_JFrame.Shopping_JFrame;
+
 /**
  * 
- * @author zjx
- *	购宠商城  模块
+ * @author zjx 购宠商城 模块
  */
 public class zjx_Test {
-    public static void main(String[] args) {
-    	Shopping_JFrame s = new Shopping_JFrame();
-    	s.setVisible(true);
+	public static void main(String[] args) {
+		Shopping_JFrame s = new Shopping_JFrame();
+		s.setVisible(true);
 	}
 }

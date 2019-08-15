@@ -14,6 +14,7 @@ import Object_Project.User_YouLeyuan;
 import Service.Bill_Service;
 
 public class Park_JFrame extends JFrame {
+<<<<<<< HEAD
 	
 
 	
@@ -26,6 +27,15 @@ public class Park_JFrame extends JFrame {
 	double num=0;//总金额
 	private JTextField tf_money;
 	
+=======
+
+	User_YouLeyuan user = new User_YouLeyuan();
+
+	String sum = null;// 文本框显示金额总和
+	double num = 0;// 总金额
+	private JTextField tf_money;
+
+>>>>>>> 80a007944e0b6b51e889fc2c724f7e1c9d9d10a4
 	public Park_JFrame() {
 		super();
 		
@@ -36,16 +46,24 @@ public class Park_JFrame extends JFrame {
 		final JCheckBox ckBox_yy = new JCheckBox();
 		ckBox_yy.addActionListener(new ActionListener() {
 			public void actionPerformed(final ActionEvent e) {
+<<<<<<< HEAD
 				
 				
 				user.setMoney(user.getMoney()+user.getSwimming());
-				if(ckBox_yy.isSelected()==true){
+				if(ckBox_yy.isSelected()==true){//显示价格
 					num=num+user.getSwimming();
 					sum=String.valueOf(num);
+=======
+
+				user.setMoney(user.getMoney() + user.getSwimming());
+				if (ckBox_yy.isSelected() == true) {
+					num = num + user.getSwimming();
+					sum = String.valueOf(num);
+>>>>>>> 9744c489c1102f1370a61f14616b3471bc70de14
 					tf_money.setText(sum);
-				}else{
-					num=num-user.getSwimming();
-					sum=String.valueOf(num);
+				} else {
+					num = num - user.getSwimming();
+					sum = String.valueOf(num);
 					tf_money.setText(sum);
 				}
 			}
@@ -59,17 +77,24 @@ public class Park_JFrame extends JFrame {
 		ckBox_ht.addActionListener(new ActionListener() {
 			public void actionPerformed(final ActionEvent e) {
 
+<<<<<<< HEAD
 				user .setMoney(user.getMoney()+user.getSlide());
 				if(ckBox_ht.isSelected()==true){
 					num=num+user.getSlide();
 					sum=String.valueOf(num);
+=======
+				user.setMoney(user.getMoney() + user.getSlide());
+				if (ckBox_ht.isSelected() == true) {
+					num = num + user.getSlide();
+					sum = String.valueOf(num);
+>>>>>>> 80a007944e0b6b51e889fc2c724f7e1c9d9d10a4
 					tf_money.setText(sum);
-				}else{
-					num=num-user.getSlide();
-					sum=String.valueOf(num);
+				} else {
+					num = num - user.getSlide();
+					sum = String.valueOf(num);
 					tf_money.setText(sum);
 				}
-				
+
 			}
 		});
 		ckBox_ht.setFont(new Font("", Font.BOLD, 15));
@@ -80,18 +105,26 @@ public class Park_JFrame extends JFrame {
 		final JCheckBox ckBox_qq = new JCheckBox();
 		ckBox_qq.addActionListener(new ActionListener() {
 			public void actionPerformed(final ActionEvent e) {
+<<<<<<< HEAD
 		
 				user.setMoney(user.getMoney()+user.getSwing());
 				if(ckBox_qq.isSelected()==true){
 					num=num+user.getSwing();
 					sum=String.valueOf(num);
+=======
+
+				user.setMoney(user.getMoney() + user.getSwing());
+				if (ckBox_qq.isSelected() == true) {
+					num = num + user.getSwing();
+					sum = String.valueOf(num);
+>>>>>>> 80a007944e0b6b51e889fc2c724f7e1c9d9d10a4
 					tf_money.setText(sum);
-				}else{
-					num=num-user.getSwing();
-					sum=String.valueOf(num);
+				} else {
+					num = num - user.getSwing();
+					sum = String.valueOf(num);
 					tf_money.setText(sum);
 				}
-				
+
 			}
 		});
 		ckBox_qq.setFont(new Font("", Font.BOLD, 15));
@@ -102,18 +135,18 @@ public class Park_JFrame extends JFrame {
 		final JCheckBox ckBox_dmq = new JCheckBox();
 		ckBox_dmq.addActionListener(new ActionListener() {
 			public void actionPerformed(final ActionEvent e) {
-				
-				user.setMoney(user.getMoney()+user.getBrige());
-				if(ckBox_dmq.isSelected()==true){
-					num=num+user.getBrige();
-					sum=String.valueOf(num);
+
+				user.setMoney(user.getMoney() + user.getBrige());
+				if (ckBox_dmq.isSelected() == true) {
+					num = num + user.getBrige();
+					sum = String.valueOf(num);
 					tf_money.setText(sum);
-				}else{
-					num=num-user.getBrige();
-					sum=String.valueOf(num);
+				} else {
+					num = num - user.getBrige();
+					sum = String.valueOf(num);
 					tf_money.setText(sum);
 				}
-				
+
 			}
 		});
 		ckBox_dmq.setFont(new Font("", Font.BOLD, 15));
@@ -125,18 +158,18 @@ public class Park_JFrame extends JFrame {
 		ckBox_tq.setFont(new Font("", Font.BOLD, 15));
 		ckBox_tq.addActionListener(new ActionListener() {
 			public void actionPerformed(final ActionEvent e) {
-				
-				user.setMoney(user.getMoney()+user.getCircle());
-				if(ckBox_tq.isSelected()==true){
-					num=num+user.getCircle();
-					sum=String.valueOf(num);
+
+				user.setMoney(user.getMoney() + user.getCircle());
+				if (ckBox_tq.isSelected() == true) {
+					num = num + user.getCircle();
+					sum = String.valueOf(num);
 					tf_money.setText(sum);
-				}else{
-					num=num-user.getCircle();
-					sum=String.valueOf(num);
+				} else {
+					num = num - user.getCircle();
+					sum = String.valueOf(num);
 					tf_money.setText(sum);
 				}
-				
+
 			}
 		});
 		ckBox_tq.setText("跳圈  15元/小时");
@@ -156,7 +189,7 @@ public class Park_JFrame extends JFrame {
 		final JButton button = new JButton();
 		button.addActionListener(new ActionListener() {
 			public void actionPerformed(final ActionEvent e) {
-				Bill_Service ser=new Bill_Service();
+				Bill_Service ser = new Bill_Service();
 				ser.park(user);
 			}
 		});

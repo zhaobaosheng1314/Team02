@@ -1,4 +1,4 @@
-package DengLu;
+package Pet_JFrame;
 
 import java.awt.Color;
 import java.awt.Font;
@@ -7,18 +7,21 @@ import java.awt.event.ActionListener;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
+
+import DengLu.DengLu;
+import DengLu.ZhuCe;
+
 /**
  * 
- * zbs	
- *	入口界面，注册  登录  游客
+ * zbs 入口界面，注册 登录 游客
  */
-public class Login extends JFrame{
-	public Login() {
+public class Login_JFrame extends JFrame {
+	public Login_JFrame() {
 		super();
 		getContentPane().setLayout(null);
 		setTitle("首页");
-		setSize(858,700);
-		final JLabel label =new JLabel();
+		setSize(858, 700);
+		final JLabel label = new JLabel();
 		label.setText("绯红色的回忆");
 		label.setForeground(new Color(255, 0, 255));
 		label.setFont(new Font("华文彩云", Font.BOLD, 42));
@@ -50,7 +53,8 @@ public class Login extends JFrame{
 		final JButton button_2 = new JButton();
 		button_2.addActionListener(new ActionListener() {
 			public void actionPerformed(final ActionEvent e) {
-				
+				new ZhuCe().setVisible(true);
+				setVisible(false);
 			}
 		});
 		button_2.setFont(new Font("@方正粗黑宋简体", Font.BOLD, 22));

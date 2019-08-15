@@ -10,13 +10,13 @@ import java.util.ArrayList;
 import javax.swing.JButton;
 import javax.swing.JCheckBox;
 import javax.swing.JFrame;
+import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JScrollPane;
 import javax.swing.JTable;
 import javax.swing.JTextField;
 import javax.swing.table.DefaultTableModel;
 import javax.swing.table.TableCellRenderer;
-
 import Object_Project.PetAll;
 import Pet_JFrame.Shopping_JFrame;
 import Service.PetAll_Service;
@@ -24,11 +24,16 @@ import Service.PetAll_Service;
 /**
  * 张建祥
  */
-public class ShopCarView extends JFrame{
+public class ShopCarView extends JFrame {
 	PetAll_Service service = new PetAll_Service();
 	DefaultTableModel dtable = new DefaultTableModel();// 创建模板
 	private JTable table;
+<<<<<<< HEAD
+	private JTextField text_price;
+=======
 	private JTextField textField;
+
+>>>>>>> 9744c489c1102f1370a61f14616b3471bc70de14
 	public ShopCarView(String petnm) {
 		super();
 		setSize(500, 500);
@@ -37,18 +42,60 @@ public class ShopCarView extends JFrame{
 		final JPanel panel = new JPanel();
 		getContentPane().add(panel, BorderLayout.NORTH);
 
-		textField = new JTextField();
-		panel.add(textField);
-		textField.setColumns(10);
-
+		text_price = new JTextField();
+		panel.add(text_price);
+		text_price.setColumns(10);
+		 
+		try {
+		    double price =	service.sumprice();
+		
+			text_price.setText(String.valueOf(price)+"元");
+			} catch (Exception e1) {
+				// TODO Auto-generated catch block
+				e1.printStackTrace();
+			}
 		final JButton button_2 = new JButton();
+		button_2.addActionListener(new ActionListener() {
+			public void actionPerformed(final ActionEvent e) {
+
+			}
+		});
 		panel.add(button_2);
 		button_2.setText("结算");
+
+		final JPanel panel_6 = new JPanel();
+		panel.add(panel_6);
+
+		final JPanel panel_5 = new JPanel();
+		panel.add(panel_5);
+
+		final JButton button_3 = new JButton();
+		button_3.addActionListener(new ActionListener() {
+			public void actionPerformed(final ActionEvent e) {
+				try {
+				    double refreshPrice =	service.sumprice();
+				
+					text_price.setText(String.valueOf(refreshPrice)+"元");
+					} catch (Exception e1) {
+						// TODO Auto-generated catch block
+						e1.printStackTrace();
+					}
+				
+			}
+		});
+		button_3.setText("刷新");
+		panel.add(button_3);
 
 		final JPanel panel_4 = new JPanel();
 		getContentPane().add(panel_4, BorderLayout.SOUTH);
 
 		final JButton button = new JButton();
+		button.addActionListener(new ActionListener() {
+			public void actionPerformed(final ActionEvent e) {
+				Shopping_JFrame shopjfrom = new Shopping_JFrame();
+				shopjfrom.setVisible(true); // 打开商城界面
+			}
+		});
 		panel_4.add(button);
 		button.setText("返回商城");
 
@@ -62,6 +109,31 @@ public class ShopCarView extends JFrame{
 		panel_4.add(panel_1);
 
 		final JButton button_1 = new JButton();
+		button_1.addActionListener(new ActionListener() {
+			public void actionPerformed(final ActionEvent e) {
+				int no = table.getSelectedRowCount();// 获取表中选中的行数
+				if (no > 6) {// showMessageDialog：调出一个对话框
+					JOptionPane.showMessageDialog(null, "请注意，你选的太多了");
+				} else if (no == 0) {
+					JOptionPane.showMessageDialog(null, "你还没选行呢！！");
+				} else {// showConfirmDialog：调出一个有选项的对话框
+					int confirmNo = JOptionPane.showConfirmDialog(null, "你...你确定...定要删除吗?");
+					if (confirmNo == 0) {
+						int rowNo = table.getSelectedRow();// 获取行的索引
+						String petname = (String) table.getValueAt(rowNo, 0);// 获得动物名
+						dtable.removeRow(rowNo);
+						PetAll_Service petallservice = new PetAll_Service();
+						try {
+							petallservice.delete(petname);
+						} catch (Exception e2) {
+							// TODO Auto-generated catch block
+							e2.printStackTrace();
+						}
+					}
+				}
+
+			}
+		});
 		panel_4.add(button_1);
 		button_1.setText("删除");
 
@@ -83,32 +155,47 @@ public class ShopCarView extends JFrame{
 		dtable.addColumn("宠物类");
 		dtable.addColumn("选中");
 		Shopping_JFrame shop = new Shopping_JFrame();
+<<<<<<< HEAD
 		table.getColumnModel().getColumn(10).setCellRenderer(new TableCellRenderer(){
 			  public Component getTableCellRendererComponent(JTable table,
 	                    Object value, boolean isSelected, boolean hasFocus,
 	                    int row, int column) {
+
 				  JCheckBox ck = new JCheckBox();
 				   ck.setSelected(isSelected);//选中当前的行
-				   ck.setOpaque(true);//透明度
+				   ck.setOpaque(false);//透明度
 				   ck.setHorizontalAlignment((int) 0.5f);//左右对齐
 	                return ck;
 	            }});    //单选框
 		
+		
+=======
+		table.getColumnModel().getColumn(10).setCellRenderer(new TableCellRenderer() {
+			public Component getTableCellRendererComponent(JTable table, Object value, boolean isSelected,
+					boolean hasFocus, int row, int column) {
+				JCheckBox ck = new JCheckBox();
+				ck.setSelected(isSelected);// 选中当前的行
+				ck.setOpaque(true);// 透明度
+				ck.setHorizontalAlignment((int) 0.5f);// 左右对齐
+				return ck;
+			}
+		}); // 单选框
+
+>>>>>>> 9744c489c1102f1370a61f14616b3471bc70de14
 		ArrayList<PetAll> list = null;
 		try {
-			list = service.addcar(petnm);
+			list = service.addpetcar();
+			for (PetAll petall : list) {
+				dtable.addRow(new Object[] { petall.getPetname(), petall.getPettype(), petall.getPetsex(),
+						petall.getPetage(), petall.getWeight(), petall.getPetprice(), petall.getPetshape(),
+						petall.getPethair(), petall.getPetgood(), petall.getPet() });
+			}
+
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
-		}// 将service层的集合传过来
-		for (PetAll petall : list) {
-			dtable.addRow(new Object[] { petall.getPetname(),
-					petall.getPettype(), petall.getPetsex(),
-					petall.getPetage(), petall.getWeight(),
-					petall.getPetprice(), petall.getPetshape(),
-					petall.getPethair(), petall.getPetgood(),
-					petall.getPet() });
 		}
+
 	}
-	
+
 }
