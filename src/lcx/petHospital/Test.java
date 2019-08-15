@@ -3,6 +3,7 @@ package lcx.petHospital;
 import java.awt.Dimension;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
+
 //Мејм
 public class Test extends JFrame {
 	public Test() {

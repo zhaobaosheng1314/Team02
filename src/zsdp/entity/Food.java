@@ -2,27 +2,25 @@ package zsdp.entity;
 
 /**
  * 宠物食品类
+ * 
  * @author admin
  *
  */
 
 public class Food {
-	
-	private String shopName;//商品名
-	private double price;	//价格
-	private String shopType;//食品类型
-	private int amount;		//库存
-	private double weight;	//重量（规格）
-	private String consumeType="宠物食品";//消费类型
-	
-	
-	
+
+	private String shopName;// 商品名
+	private double price; // 价格
+	private String shopType;// 食品类型
+	private int amount; // 库存
+	private double weight; // 重量（规格）
+	private String consumeType = "宠物食品";// 消费类型
+
 	public Food() {
 		super();
 	}
 
-	public Food(String shopName, double price, String shopType, int amount,
-			double weight) {
+	public Food(String shopName, double price, String shopType, int amount, double weight) {
 		super();
 		this.shopName = shopName;
 		this.price = price;
@@ -31,14 +29,13 @@ public class Food {
 		this.weight = weight;
 	}
 
-//	@Override
-//	public String toString() {
-//		return "Food [shopName=" + shopName + ", price=" + price
-//				+ ", shopType=" + shopType + ", amount=" + amount + ", weight="
-//				+ weight + "]";
-//	}
+	// @Override
+	// public String toString() {
+	// return "Food [shopName=" + shopName + ", price=" + price
+	// + ", shopType=" + shopType + ", amount=" + amount + ", weight="
+	// + weight + "]";
+	// }
 
-	
 	public String getShopName() {
 		return shopName;
 	}
@@ -78,18 +75,5 @@ public class Food {
 	public void setWeight(double weight) {
 		this.weight = weight;
 	}
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
 
 }

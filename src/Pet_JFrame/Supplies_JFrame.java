@@ -13,11 +13,15 @@ import javax.swing.JMenuBar;
 import javax.swing.JMenuItem;
 
 /**
+<<<<<<< HEAD
  * @author zsdp
  * å® ç‰©ç”¨å“   ä¸»ç•Œé¢
+=======
+ * @author zsdp ³èÎïÓÃÆ· Ö÷½çÃæ
+>>>>>>> b6546ec40e13bc0f81dba5a682dae876a141a769
  */
 
-public class Supplies_JFrame extends JFrame{
+public class Supplies_JFrame extends JFrame {
 	public Supplies_JFrame() {
 		super();
 		setBounds(new Rectangle(0, 0, 800, 800));
@@ -79,6 +83,7 @@ public class Supplies_JFrame extends JFrame{
 		newItemMenuItem.setText("New Item");
 		menu.add(newItemMenuItem);
 	}
+<<<<<<< HEAD
 	
 	 public  void addImg(String Url,int x,int y,int hight,int width,int displayGrand){
 		 //åˆ›å»ºæ¡Œé¢é¢æ¿
@@ -93,5 +98,7 @@ public class Supplies_JFrame extends JFrame{
 	    }
 	 
 	   
+=======
+>>>>>>> b6546ec40e13bc0f81dba5a682dae876a141a769
 
 }
