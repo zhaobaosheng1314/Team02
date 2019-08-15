@@ -3,6 +3,7 @@ package lcx.petHospital;
 import java.awt.Dimension;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
+
 //Öû³æ
 public class Moth extends JFrame {
 	public Moth() {

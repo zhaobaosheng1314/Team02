@@ -10,11 +10,12 @@ import javax.swing.JTextField;
 
 /**
  * 宠物食品
+ * 
  * @author admin
  *
  */
 
-public class FoodFrame extends JFrame{
+public class FoodFrame extends JFrame {
 	public FoodFrame() {
 		super();
 		getContentPane().setLayout(null);
@@ -29,10 +30,7 @@ public class FoodFrame extends JFrame{
 		checkBox.setFont(new Font("", Font.BOLD, 22));
 		checkBox.addActionListener(new ActionListener() {
 			public void actionPerformed(final ActionEvent e) {
-				
-				
-				
-				
+
 			}
 		});
 		checkBox.setText("狗粮肉粒拌饭(1kg)  ¥29.9");
@@ -99,12 +97,5 @@ public class FoodFrame extends JFrame{
 		button.setBounds(347, 536, 174, 43);
 		getContentPane().add(button);
 	}
-	
-	
-	
-	
-	
-	
-	
 
 }

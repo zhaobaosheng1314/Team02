@@ -7,7 +7,7 @@ import javax.swing.JButton;
 import javax.swing.JCheckBox;
 import javax.swing.JFrame;
 
-public class NursingFrame extends JFrame{
+public class NursingFrame extends JFrame {
 	public NursingFrame() {
 		super();
 		getContentPane().setLayout(null);
@@ -70,9 +70,5 @@ public class NursingFrame extends JFrame{
 		button.setBounds(264, 479, 165, 40);
 		getContentPane().add(button);
 	}
-	
-	
-	
-	
 
 }

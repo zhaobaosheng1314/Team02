@@ -15,8 +15,7 @@ public class Dao {
 	public int hospital_dao(Hospital hos) {
 
 		String sql = "insert into bill(name,phone,consumeType,money)values(?,?,?,?)";
-		int no = db.preUpdate(sql, hos.getName(), hos.getPhone(),
-				hos.getConsumeType(), hos.getMoney());
+		int no = db.preUpdate(sql, hos.getName(), hos.getPhone(), hos.getConsumeType(), hos.getMoney());
 		return no;
 	}
 }
