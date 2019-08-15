@@ -11,7 +11,7 @@ public class User_YouLeyuan {
 	private final double brige=10;//¶ÀÄ¾ÇÅ¼ÛÇ®
 	private final double circle=15;//ÌøÈ¦¼ÛÇ®
 	public User_YouLeyuan() {
-		super();
+	
 	}
 	public String getName() {
 		return name;

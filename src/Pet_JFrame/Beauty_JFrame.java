@@ -1,5 +1,6 @@
 package Pet_JFrame;
 
+import java.awt.Color;
 import java.awt.Font;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -30,7 +31,7 @@ public class Beauty_JFrame extends JFrame {
 	double num=0;//总金额
 	public Beauty_JFrame() {
 		super();
-		setSize(600, 450);
+		setSize(800, 467);
 		setVisible(true);
 		getContentPane().setLayout(null);
 
@@ -55,7 +56,7 @@ public class Beauty_JFrame extends JFrame {
 			}
 		});
 		ckBox_xz.setText("洗澡   单价100元/次");
-		ckBox_xz.setBounds(50, 61, 267, 26);
+		ckBox_xz.setBounds(107, 125, 267, 26);
 		getContentPane().add(ckBox_xz);
 
 		final JCheckBox ckBox_jf = new JCheckBox();
@@ -77,7 +78,7 @@ public class Beauty_JFrame extends JFrame {
 		});
 		ckBox_jf.setFont(new Font("", Font.BOLD, 22));
 		ckBox_jf.setText("剪发   单价100元/次");
-		ckBox_jf.setBounds(50, 123, 223, 26);
+		ckBox_jf.setBounds(107, 190, 223, 26);
 		getContentPane().add(ckBox_jf);
 
 		
@@ -102,7 +103,7 @@ public class Beauty_JFrame extends JFrame {
 		});
 		ckBox_jzj.setFont(new Font("", Font.BOLD, 22));
 		ckBox_jzj.setText("剪指甲   单价15元/次");
-		ckBox_jzj.setBounds(50, 181, 255, 26);
+		ckBox_jzj.setBounds(107, 268, 255, 26);
 		getContentPane().add(ckBox_jzj);
 
 		final JCheckBox ckBox_xlh = new JCheckBox();
@@ -125,7 +126,7 @@ public class Beauty_JFrame extends JFrame {
 		});
 		ckBox_xlh.setFont(new Font("", Font.BOLD, 22));
 		ckBox_xlh.setText("洗泪痕  50元/次");
-		ckBox_xlh.setBounds(333, 61, 223, 26);
+		ckBox_xlh.setBounds(491, 125, 223, 26);
 		getContentPane().add(ckBox_xlh);
 
 		final JCheckBox ckBox_kmj = new JCheckBox();
@@ -148,7 +149,7 @@ public class Beauty_JFrame extends JFrame {
 			}
 		});
 		ckBox_kmj.setText("开毛结  50元/小时");
-		ckBox_kmj.setBounds(333, 123, 223, 26);
+		ckBox_kmj.setBounds(491, 190, 223, 26);
 		getContentPane().add(ckBox_kmj);
 
 		final JCheckBox ckBox_sy = new JCheckBox();
@@ -171,7 +172,7 @@ public class Beauty_JFrame extends JFrame {
 		});
 		ckBox_sy.setFont(new Font("", Font.BOLD, 22));
 		ckBox_sy.setText("刷牙  10元/次");
-		ckBox_sy.setBounds(333, 185, 223, 26);
+		ckBox_sy.setBounds(491, 268, 223, 26);
 		getContentPane().add(ckBox_sy);
 		
 		
@@ -186,12 +187,19 @@ public class Beauty_JFrame extends JFrame {
 			}
 		});
 		button.setText("提交");
-		button.setBounds(427, 313, 106, 28);
+		button.setBounds(620, 379, 106, 28);
 		getContentPane().add(button);
 
 		tf_money = new JTextField();
-		tf_money.setBounds(265, 316, 95, 25);
+		tf_money.setBounds(461, 381, 95, 25);
 		getContentPane().add(tf_money);
+
+		final JLabel lb_titile = new JLabel();
+		lb_titile.setForeground(new Color(255, 0, 255));
+		lb_titile.setFont(new Font("", Font.BOLD, 26));
+		lb_titile.setText("宠物美容院欢迎您的到来");
+		lb_titile.setBounds(250, 22, 352, 47);
+		getContentPane().add(lb_titile);
 		
 		
 		
