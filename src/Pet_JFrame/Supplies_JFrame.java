@@ -2,29 +2,32 @@ package Pet_JFrame;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+
+import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JFrame;
+import javax.swing.JLabel;
 import javax.swing.JMenu;
 import javax.swing.JMenuBar;
 import javax.swing.JMenuItem;
 
 /**
  * @author zsdp
- * ³èÎïÓÃÆ·   Ö÷½çÃæ
+ * å® ç‰©ç”¨å“   ä¸»ç•Œé¢
  */
 
 public class Supplies_JFrame extends JFrame{
 	public Supplies_JFrame() {
 		super();
 		getContentPane().setLayout(null);
-		setTitle("³èÎïÓÃÆ·");
+		setTitle("å® ç‰©ç”¨å“");
 
 		final JButton button = new JButton();
 		button.addActionListener(new ActionListener() {
 			public void actionPerformed(final ActionEvent arg0) {
 			}
 		});
-		button.setText("³èÎïÊ³Æ·");
+		button.setText("å® ç‰©é£Ÿå“");
 		button.setBounds(90, 85, 106, 68);
 		getContentPane().add(button);
 
@@ -33,12 +36,12 @@ public class Supplies_JFrame extends JFrame{
 			public void actionPerformed(final ActionEvent e) {
 			}
 		});
-		button_1.setText("³èÎïÍæ¾ß");
+		button_1.setText("å® ç‰©ç©å…·");
 		button_1.setBounds(273, 85, 106, 68);
 		getContentPane().add(button_1);
 
 		final JButton button_2 = new JButton();
-		button_2.setText("»¤ÀíÓÃÆ·");
+		button_2.setText("æŠ¤ç†ç”¨å“");
 		button_2.setBounds(90, 193, 106, 68);
 		getContentPane().add(button_2);
 
@@ -47,15 +50,16 @@ public class Supplies_JFrame extends JFrame{
 			public void actionPerformed(final ActionEvent e) {
 			}
 		});
-		button_3.setText("³èÎï±£½¡Æ·");
+		button_3.setText("å® ç‰©ä¿å¥å“");
 		button_3.setBounds(273, 193, 106, 68);
 		getContentPane().add(button_3);
 
 		final JButton button_4 = new JButton();
-		button_4.setText("·µ»Ø");
+		button_4.setText("è¿”å›");
 		button_4.setBounds(0, 10, 71, 28);
 		getContentPane().add(button_4);
-
+		
+		
 		final JMenuBar menuBar = new JMenuBar();
 		setJMenuBar(menuBar);
 
@@ -64,7 +68,7 @@ public class Supplies_JFrame extends JFrame{
 			public void actionPerformed(final ActionEvent e) {
 			}
 		});
-		menu.setText("µÇÂ¼");
+		menu.setText("ç™»å½•");
 		menuBar.add(menu);
 
 		final JMenuItem newItemMenuItem = new JMenuItem();
@@ -73,6 +77,7 @@ public class Supplies_JFrame extends JFrame{
 	}
 	
 	
-	
+	 
+	   
 
 }
