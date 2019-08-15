@@ -1,5 +1,6 @@
 package Pet_JFrame;
 
+import java.awt.Rectangle;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
@@ -19,6 +20,7 @@ import javax.swing.JMenuItem;
 public class Supplies_JFrame extends JFrame{
 	public Supplies_JFrame() {
 		super();
+		setBounds(new Rectangle(0, 0, 800, 800));
 		getContentPane().setLayout(null);
 		setTitle("宠物用品");
 
@@ -70,13 +72,25 @@ public class Supplies_JFrame extends JFrame{
 		});
 		menu.setText("登录");
 		menuBar.add(menu);
-
+		
+		addImg("img/1.jpg", 90, 160, 200, 200, 1);
+		addImg("images/my.jpg", 0,0, 1000, 800, 3);
 		final JMenuItem newItemMenuItem = new JMenuItem();
 		newItemMenuItem.setText("New Item");
 		menu.add(newItemMenuItem);
 	}
 	
-	
+	 public  void addImg(String Url,int x,int y,int hight,int width,int displayGrand){
+		 //创建桌面面板
+	      
+	        final JLabel backLabel = new JLabel();
+	     
+	        ImageIcon icon = new ImageIcon(Url);   //设置图片
+	        backLabel.setIcon(icon);
+	        backLabel.setBounds(x,y,width,hight);  //设置边界
+	      
+	        getContentPane().add(backLabel,displayGrand);
+	    }
 	 
 	   
 
