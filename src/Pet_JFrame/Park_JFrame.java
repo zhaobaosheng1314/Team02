@@ -167,7 +167,7 @@ public class Park_JFrame extends JFrame {
 
 		tf_money = new JTextField();
 		tf_money.setFont(new Font("", Font.BOLD, 15));
-		tf_money.setBounds(450, 386, 87, 28);
+		tf_money.setBounds(489, 386, 87, 28);
 		getContentPane().add(tf_money);
 
 		final JLabel label = new JLabel();
@@ -176,6 +176,13 @@ public class Park_JFrame extends JFrame {
 		label.setText("宠物游乐园");
 		label.setBounds(302, 30, 235, 53);
 		getContentPane().add(label);
+
+		final JLabel lb_show = new JLabel();
+		lb_show.setFont(new Font("", Font.BOLD, 15));
+		lb_show.setText("显示金额：");
+		lb_show.setBounds(402, 387, 87, 26);
+		getContentPane().add(lb_show);
+		
 	}
 
 }

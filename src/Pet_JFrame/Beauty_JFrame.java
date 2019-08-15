@@ -31,7 +31,7 @@ public class Beauty_JFrame extends JFrame {
 	double num=0;//总金额
 	public Beauty_JFrame() {
 		super();
-		setSize(800, 467);
+		setSize(810, 480);
 		setVisible(true);
 		getContentPane().setLayout(null);
 
@@ -179,6 +179,7 @@ public class Beauty_JFrame extends JFrame {
 		
 		
 		final JButton button = new JButton();
+		button.setFont(new Font("", Font.BOLD, 15));
 		button.addActionListener(new ActionListener() {
 			public void actionPerformed(final ActionEvent e) {
 				
@@ -187,19 +188,26 @@ public class Beauty_JFrame extends JFrame {
 			}
 		});
 		button.setText("提交");
-		button.setBounds(620, 379, 106, 28);
+		button.setBounds(631, 357, 106, 28);
 		getContentPane().add(button);
 
 		tf_money = new JTextField();
-		tf_money.setBounds(461, 381, 95, 25);
+		tf_money.setFont(new Font("", Font.BOLD, 15));
+		tf_money.setBounds(508, 358, 95, 25);
 		getContentPane().add(tf_money);
 
 		final JLabel lb_titile = new JLabel();
 		lb_titile.setForeground(new Color(255, 0, 255));
 		lb_titile.setFont(new Font("", Font.BOLD, 26));
 		lb_titile.setText("宠物美容院欢迎您的到来");
-		lb_titile.setBounds(250, 22, 352, 47);
+		lb_titile.setBounds(234, 29, 352, 47);
 		getContentPane().add(lb_titile);
+
+		final JLabel lb_show = new JLabel();
+		lb_show.setFont(new Font("", Font.BOLD, 15));
+		lb_show.setText("显示金额:");
+		lb_show.setBounds(414, 359, 88, 24);
+		getContentPane().add(lb_show);
 		
 		
 		
