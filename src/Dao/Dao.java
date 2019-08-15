@@ -1,8 +1,7 @@
-package lcx.again;
+package Dao;
 
-import Hospital.Hospital;
-
-import lcx.dbutils.DButils;
+import lcxHospital.Hospital;
+import DButils.DButils;
 
 /**
  * lcx ≥ËŒÔ“Ω‘∫

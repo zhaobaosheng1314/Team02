@@ -1,8 +1,10 @@
-package lcx.again;
+package Text;
 
-import lcx.petHospital.Vaccinum;
+import lcxView.Vaccinum;
 
-public class Text {
+
+
+public class lcxText {
 	public static void main(String[] args) {
 		Vaccinum vaccinum = new Vaccinum();
 		vaccinum.setVisible(true);

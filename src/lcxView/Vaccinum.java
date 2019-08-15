@@ -1,4 +1,4 @@
-package lcx.again;
+package lcxView;
 
 import java.awt.Dimension;
 import java.awt.Font;
@@ -12,7 +12,7 @@ import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import javax.swing.JTextField;
 
-import Hospital.Hospital;
+import lcxHospital.Hospital;
 import Service.HospitalService;
 
 public class Vaccinum extends JFrame {
@@ -289,7 +289,7 @@ public class Vaccinum extends JFrame {
 				//service ²ã
 				HospitalService serv=new HospitalService();
 				serv.ser(hos);
-				JOptionPane.showMessageDialog(null, "¹ºÂò³É¹¦");
+				
 		
 			}
 		});

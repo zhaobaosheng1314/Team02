@@ -1,4 +1,4 @@
-package lcx.again;
+package lcxHospital;
 
 public class Hospital {
 	private String name;// 消费对象名字
@@ -13,57 +13,74 @@ public class Hospital {
 	private final double zhu = 300;// 蛀虫
 	private final double wai = 200;// 外伤
 	private final double ti = 100;// 体检
+
 	public String getName() {
 		return name;
 	}
+
 	public void setName(String name) {
 		this.name = name;
 	}
+
 	public double getMoney() {
 		return money;
 	}
+
 	public void setMoney(double money) {
 		this.money = money;
 	}
+
 	public String getPhone() {
 		return phone;
 	}
+
 	public void setPhone(String phone) {
 		this.phone = phone;
 	}
+
 	public String getConsumeType() {
 		return consumeType;
 	}
+
 	public void setConsumeType(String consumeType) {
 		this.consumeType = consumeType;
 	}
+
 	public double getQuan() {
 		return quan;
 	}
+
 	public double getSan() {
 		return san;
 	}
+
 	public double getWu() {
 		return wu;
 	}
+
 	public double getKuang() {
 		return kuang;
 	}
+
 	public double getMao() {
 		return mao;
 	}
+
 	public double getZhu() {
 		return zhu;
 	}
+
 	public double getWai() {
 		return wai;
 	}
+
 	public double getTi() {
 		return ti;
 	}
+
 	public Hospital() {
 		super();
-		
+
 	}
 
 }
