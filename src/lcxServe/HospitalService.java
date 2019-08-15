@@ -1,7 +1,7 @@
-package lcx.again;
+package lcxServe;
 
+import lcxHospital.Hospital;
 import Dao.Dao;
-import Hospital.Hospital;
 
 //ҽԺ
 public class HospitalService {

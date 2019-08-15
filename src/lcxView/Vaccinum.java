@@ -1,4 +1,4 @@
-package lcx.again;
+package lcxView;
 
 import java.awt.Dimension;
 import java.awt.Font;
@@ -12,7 +12,7 @@ import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import javax.swing.JTextField;
 
-import Hospital.Hospital;
+import lcxHospital.Hospital;
 import Service.HospitalService;
 
 public class Vaccinum extends JFrame {
@@ -289,8 +289,13 @@ public class Vaccinum extends JFrame {
 				// service 层
 				HospitalService serv = new HospitalService();
 				serv.ser(hos);
+<<<<<<< HEAD:src/lcxView/Vaccinum.java
+				
+		
+=======
 				JOptionPane.showMessageDialog(null, "购买成功");
 
+>>>>>>> 9b08f7e925e79d6eccb28ee19d1a2acad972c418:src/lcx/again/Vaccinum.java
 			}
 		});
 		button.setText("确认支付");

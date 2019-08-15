@@ -1,4 +1,4 @@
-package lcx.again;
+package lcxHospital;
 
 public class Hospital {
 	private String name;// 消费对象名字

@@ -145,4 +145,14 @@ public class PetAll_Dao {
 		}
 		return ts;
 	}
+	public ArrayList<Double> sumprice() throws SQLException{
+		ArrayList<Double> list = new ArrayList<Double>();
+		String sql = "select petprice from SHOP_CAR";
+		ResultSet res = db.preQuery(sql);
+		while(res.next()){			
+				Double price = res.getDouble("petprice");
+				list.add(price);				
+		}
+		return list;
+	}
 }

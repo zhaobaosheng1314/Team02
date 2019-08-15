@@ -173,9 +173,28 @@ public class Shopping_JFrame extends JFrame {
 		final JButton button_4 = new JButton();
 		button_4.addActionListener(new ActionListener() {
 			public void actionPerformed(final ActionEvent e) {
+<<<<<<< HEAD
+				boolean flag = false;
+				Component[] com = table.getComponents();
+				for (Component component : com) {
+					//如果当前的组件是 deptframe 类型的
+					if (component instanceof JTable ) {
+						flag = true;//已经有了
+						break;
+					}
+
+				}
+				if (flag == false) {
+					ShopCarView car = new ShopCarView(petnm);								
+					car.setVisible(true);	
+				}
+				
+							
+=======
 
 				ShopCarView car = new ShopCarView(petnm);
 				car.setVisible(true);
+>>>>>>> 9744c489c1102f1370a61f14616b3471bc70de14
 			}
 		});
 		button_4.setText("查看购物车");

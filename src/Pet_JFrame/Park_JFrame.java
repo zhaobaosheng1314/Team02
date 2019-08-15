@@ -29,11 +29,20 @@ public class Park_JFrame extends JFrame {
 		final JCheckBox ckBox_yy = new JCheckBox();
 		ckBox_yy.addActionListener(new ActionListener() {
 			public void actionPerformed(final ActionEvent e) {
+<<<<<<< HEAD
+				
+				
+				user.setMoney(user.getMoney()+user.getSwimming());
+				if(ckBox_yy.isSelected()==true){//ÏÔÊ¾¼Û¸ñ
+					num=num+user.getSwimming();
+					sum=String.valueOf(num);
+=======
 
 				user.setMoney(user.getMoney() + user.getSwimming());
 				if (ckBox_yy.isSelected() == true) {
 					num = num + user.getSwimming();
 					sum = String.valueOf(num);
+>>>>>>> 9744c489c1102f1370a61f14616b3471bc70de14
 					tf_money.setText(sum);
 				} else {
 					num = num - user.getSwimming();

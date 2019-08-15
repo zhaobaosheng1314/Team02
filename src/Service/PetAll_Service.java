@@ -2,7 +2,11 @@ package Service;
 
 import java.sql.SQLException;
 import java.util.ArrayList;
+<<<<<<< HEAD
+import java.util.Iterator;
+=======
 import java.util.TreeSet;
+>>>>>>> 9744c489c1102f1370a61f14616b3471bc70de14
 
 import Dao.PetAll_Dao;
 import Object_Project.PetAll;
@@ -57,5 +61,17 @@ public class PetAll_Service {
 	public TreeSet<PetAll> found() throws SQLException {
 		TreeSet<PetAll> ts=shopdao.found();
 		return ts;
+	}
+	public double sumprice() throws SQLException{
+		double price = 0;
+		ArrayList<Double> list =shopdao.sumprice();
+		Iterator<Double> it = list.iterator();
+		while(it.hasNext()){
+			Double x = it.next();
+			price+=x;
+		}
+		
+		return price;
+		
 	}
 }
